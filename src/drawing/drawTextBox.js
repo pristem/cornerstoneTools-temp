@@ -73,10 +73,7 @@ export default function(context, textLines, x, y, color, options = {}) {
   draw(context, context => {
     context.strokeStyle = color;
 
-    if (options.paddingRatio) {
-      x -= options.paddingRatio.x * boundingBox.width;
-      y -= options.paddingRatio.y * boundingBox.height;
-    } else if (options.centering) {
+    if (options.centering) {
       // Draw the background box with padding
       if (options.centering.x === true) {
         x -= boundingBox.width / 2;
@@ -85,6 +82,11 @@ export default function(context, textLines, x, y, color, options = {}) {
       if (options.centering.y === true) {
         y -= boundingBox.height / 2;
       }
+    }
+
+    if (options.paddingRatio) {
+      x -= options.paddingRatio.x * boundingBox.width;
+      y -= options.paddingRatio.y * boundingBox.height;
     }
 
     boundingBox.left = x;
