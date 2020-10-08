@@ -1,5 +1,6 @@
 import external from '../externalModules.js';
 import pointInsideBoundingBox from '../util/pointInsideBoundingBox.js';
+import pointInsideVirtualBoundingBox from '../util/pointInsideVirtualBoundingBox.js';
 
 /**
  * Returns the first handle found to be near the provided point. Handles to search can be an array of handles, an
@@ -101,6 +102,10 @@ const _isHandleNearImagePoint = function(
       return true;
     }
   } else if (handle.hasBoundingBox === true) {
+    if (pointInsideVirtualBoundingBox(handle, coords, distanceThreshold)) {
+      return true;
+    }
+
     if (pointInsideBoundingBox(handle, coords)) {
       return true;
     }
