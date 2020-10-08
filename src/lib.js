@@ -80,6 +80,7 @@ import {
   getBrowserInfo,
   isMobileDevice,
 } from './util/getMaxSimultaneousRequests.js';
+import getDistanceThreshold from './util/getDistanceThreshold.js';
 import angleBetweenPoints from './util/angleBetweenPoints.js';
 import numbersWithCommas from './util/numbersWithCommas.js';
 import MouseCursor from './tools/cursors/MouseCursor.js';
@@ -148,6 +149,7 @@ export const lib = {
   'util/makeUnselectable': makeUnselectable,
   'util/getRGBPixels': getRGBPixels,
   'util/getDefaultSimultaneousRequests': getDefaultSimultaneousRequests,
+  'util/getDistanceThreshold': getDistanceThreshold,
   'util/getMaxSimultaneousRequests': getMaxSimultaneousRequests,
   'util/getBrowserInfo': getBrowserInfo,
   'util/isMobileDevice': isMobileDevice,
