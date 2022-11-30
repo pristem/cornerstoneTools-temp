@@ -266,7 +266,7 @@ export default class LengthTool extends BaseAnnotationTool {
 
       annotation.unit = suffix;
 
-      return `${measuredValue.toFixed(2)} ${suffix}`;
+      return `${measuredValue.toFixed(0)} ${suffix}`;
     }
 
     function textBoxAnchorPoints(handles) {

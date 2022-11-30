@@ -134,7 +134,7 @@ export default class AngleTool extends BaseAnnotationTool {
 
     angle *= 180 / Math.PI;
 
-    data.rAngle = roundToDecimal(angle, 2);
+    data.rAngle = roundToDecimal(angle, 0);
     data.invalidated = false;
   }
 
